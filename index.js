@@ -9,6 +9,7 @@ const credRoute = require('./routes/credRoute');
 const linkRoute = require('./routes/linkRoute');
 const noteRoute = require('./routes/noteRoute');
 const searchRoute = require('./routes/search');
+const healthRoute = require('./routes/health');
 
 app.use(cors());
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use('/', credRoute);
 app.use('/', linkRoute);
 app.use('/', noteRoute);
 app.use('/', searchRoute);
+app.use('/', healthRoute);
 app.use('/upload', express.static('upload'));
 
 app.listen(process.env.PORT, () => {
